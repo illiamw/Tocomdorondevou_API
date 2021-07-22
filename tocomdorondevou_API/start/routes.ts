@@ -25,6 +25,10 @@ Route.post('/unidadesProximasRef', 'UnidadesController.unidadesProximasRef')
 // Rotas Formulario
 Route.post('/registraResposta', 'FormulariosController.registraResposta')
 Route.get('/formulariosTodos', 'FormulariosController.formulariosTodos')
+// Rotas Email
+Route.get('/relatorioGestor', 'RelatoriosController.relatorioGestor')
+
+
 
 Route.get('/', () => {
   return 'Hello world'

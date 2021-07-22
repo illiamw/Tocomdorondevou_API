@@ -2,6 +2,10 @@ import { DateTime } from 'luxon'
 import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
 
 export default class Gestor extends BaseModel {
+
+  public static table = 'gestores'
+
+
   @column({ isPrimary: true })
   public cpf: string
 

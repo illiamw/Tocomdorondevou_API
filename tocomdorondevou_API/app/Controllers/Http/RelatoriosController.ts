@@ -21,7 +21,7 @@ export default class RelatoriosController {
           ? "Boa noite,"
           : "Boa tarde,"
         : hora >= 6
-        ? "Boa dia,"
+        ? "Bom dia,"
         : "Boa madrugada,";
 
     // Gerando relatório

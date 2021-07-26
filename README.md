@@ -1,3 +1,6 @@
+# Repositório da APP Mobile (Consumidor)
+https://github.com/vinicius-r-silva/To-com-dor_Onde-vou
+
 # Tocomdorondevou_API
 
 Todos os comandos de operação com a API são executados via Shell Node.js
@@ -5,6 +8,8 @@ Todos os comandos de operação com a API são executados via Shell Node.js
 ## Execução Local
 No diretório ./Tocomdorondevou_API
 ```
+npm install
+
 cd Tocomdorondevou_API
 
 node ace serve --watch
@@ -19,7 +24,6 @@ cd build
 npm ci --production
 ```
 O conteúdo do diretório ./Tocomdorondevou_API/Tocomdorondevou_API/build temos os arquivos para execução no servidor em produção, e espera-se a execução do comando ``` node server.js ``` por parte do servidor.
+Para mais informações utilizar documentação AdonisJS (https://docs.adonisjs.com/guides/introduction) 
 
 
-## Repositório da APP Mobile
-https://github.com/vinicius-r-silva/To-com-dor_Onde-vou

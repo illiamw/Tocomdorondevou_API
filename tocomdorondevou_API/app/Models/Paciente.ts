@@ -1,9 +1,18 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, column, hasOne, HasOne } from '@ioc:Adonis/Lucid/Orm'
+import  Formulario  from './Formulario';
+
+
 
 export default class Paciente extends BaseModel {
   @column({ isPrimary: true })
   public nsus: string
+
+
+  @hasOne(() => Formulario, {
+    foreignKey: 'paciente_nsus', // defaults to userId
+  })
+  public formulario: HasOne <typeof Formulario>
 
   @column()
   public nome: string

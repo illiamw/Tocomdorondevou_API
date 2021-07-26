@@ -7,7 +7,7 @@ export default class Formularios extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
       table
-        .string('nsus')
+        .string('paciente_nsus',15)
         .references('pacientes.nsus')
         .onDelete('CASCADE')
       table.integer('resultado').notNullable()

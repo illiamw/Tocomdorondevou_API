@@ -25,4 +25,7 @@ env_variables:
   MYSQL_USER: tocomdor
   MYSQL_PASSWORD: Ondevou1
   MYSQL_DB_NAME: tocomdor
+  MAILGUN_API_KEY: c9493fb94ab51631a874942aa335b2db-c485922e-56ef009a
+  MAILGUN_DOMAIN: sandbox266fe90a524c495e869bcdb5dde2df84.mailgun.org
+  CACHE_VIEWS: false
 # [END app_yaml]

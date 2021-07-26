@@ -6,8 +6,8 @@ export default class Formulario extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
-  @hasOne(() => Paciente)
-  public nsus: HasOne<typeof Paciente>
+  @column()
+  public paciente_nsus: string
 
   @column()
   public resultado: number

@@ -129,9 +129,9 @@ export default class RelatoriosController {
     gestoresDisparo.forEach(async (gestor)=>{
       console.log(gestor);
 
-      await Mail.sendLater((message) => {
+      await Mail.use('smtp').sendLater((message) => {
         message
-          .from("ToComDorOndeVou? <postmaster@sandbox266fe90a524c495e869bcdb5dde2df84.mailgun.org>")
+          .from("williambox37@gmail.com")
           .to(gestor['email'])
           .subject(
             "[ToComDorOndeVou] Relatório Referente ao mês " +
@@ -159,9 +159,16 @@ export default class RelatoriosController {
 
   public async testeEmail() {
 
-    await Mail.preview((message) => {
+    await Mail.use('mailgun').send((message) => {
       message
         .from("postmaster@sandbox266fe90a524c495e869bcdb5dde2df84.mailgun.org")
+        .to("william.luis.ferreira@usp.br")
+        .subject("TESTE")
+    });
+
+    await Mail.use('smtp').send((message) => {
+      message
+        .from("williambox37@gmail.com")
         .to("william.luis.ferreira@usp.br")
         .subject("TESTE")
     });

@@ -50,6 +50,16 @@ const mailConfig: MailConfig = {
       baseUrl: 'https://api.mailgun.net/v3',
       key: Env.get('MAILGUN_API_KEY'),
       domain: Env.get('MAILGUN_DOMAIN'),
+    },smtp: {
+      driver: 'smtp',
+      host: Env.get('SMTP_HOST') as string,
+      port: Env.get('SMTP_PORT') as string,
+      secure: false,
+      auth: {
+        type: 'login',
+        user: Env.get('SMTP_USERNAME'),
+        pass: Env.get('SMTP_PASSWORD'),
+      }
     },
 
   },

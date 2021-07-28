@@ -16,7 +16,7 @@ export default class FormulariosController {
     const paciente = await Paciente.find(nsus.nsus)
     if (!paciente) {
 
-      const paciente_novo = await Paciente.create(nsus)
+      await Paciente.create(nsus)
       const paciente_novo_load = await Paciente.findOrFail(nsus.nsus)
 
       const form_novo = await paciente_novo_load.related('formulario').create(data)

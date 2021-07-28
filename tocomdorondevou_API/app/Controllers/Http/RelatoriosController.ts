@@ -81,10 +81,12 @@ export default class RelatoriosController {
       )
     );
 
+
+
+
+
+
     // Disparo de Email
-
-
-
     // const gestor = {
     //   nome: "William Ferreira",
     //   email: "william.luis.ferreira@usp.br",
@@ -109,15 +111,27 @@ export default class RelatoriosController {
       gestor= {}
     }
 
-    console.log("Gestores",gestoresDisparo);
+    // {
+    //   cpf: '123456',
+    //   email: 'lucas.frezarim@outlook.com',
+    //   nome: 'Lucas Bonfá Frezarim',
+    //   created_at: '2021-07-27T14:27:26.000-03:00',
+    //   updated_at: '2021-07-27T14:27:26.000-03:00',
+    //   periodo: 'Boa noite,',
+    //   mes: 7,
+    //   ano: 2021
+    // }
 
-    //Disparo dos emails
+
+
+
+  //  //Disparo dos emails
     gestoresDisparo.forEach(async (gestor)=>{
       console.log(gestor);
 
       await Mail.sendLater((message) => {
         message
-          .from("ToComDorOndeVou? <postmaster@williamferreira.site>")
+          .from("ToComDorOndeVou? <postmaster@sandbox266fe90a524c495e869bcdb5dde2df84.mailgun.org>")
           .to(gestor['email'])
           .subject(
             "[ToComDorOndeVou] Relatório Referente ao mês " +
@@ -136,6 +150,20 @@ export default class RelatoriosController {
     })
 
 
+
+
+
     return relatorioMes;
+  }
+
+
+  public async testeEmail() {
+
+    await Mail.send((message) => {
+      message
+        .from("postmaster@sandbox266fe90a524c495e869bcdb5dde2df84.mailgun.org")
+        .to("william.luis.ferreira@usp.br")
+        .subject("TESTE")
+    });
   }
 }

@@ -27,6 +27,7 @@ Route.post('/registraResposta', 'FormulariosController.registraResposta')
 Route.get('/formulariosTodos', 'FormulariosController.formulariosTodos')
 // Rotas Email
 Route.get('/relatorioGestor', 'RelatoriosController.relatorioGestor')
+Route.get('/testeEmail', 'RelatoriosController.testeEmail')
 
 
 

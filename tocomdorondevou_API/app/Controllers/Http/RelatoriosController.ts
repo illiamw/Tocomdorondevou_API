@@ -159,7 +159,7 @@ export default class RelatoriosController {
 
   public async testeEmail() {
 
-    await Mail.send((message) => {
+    await Mail.preview((message) => {
       message
         .from("postmaster@sandbox266fe90a524c495e869bcdb5dde2df84.mailgun.org")
         .to("william.luis.ferreira@usp.br")
